@@ -1,7 +1,7 @@
 const FooterComponent = () => {
     return (
-        <div style={{background:"gray"}}>
-        <h2 style={{color:"white",textAlign:"center"}}>Footer Component</h2>
+        <div style={{background:"peru"}}>
+        <h2 style={{textAlign:"center"}}>Footer Component</h2>
         </div>
     )
 }

@@ -1,0 +1,12 @@
+const Contact = require("../Models/contact_modal")
+
+const contactForm = async (req, res) => {
+    try {
+        const response = req.body
+        await Contact.create(response)
+        return res.status(200).json({ message: "Message sends successfully" })
+    } catch (error) {
+        return res.status(500).json({ message: "Internal Server Error" })
+    }
+}
+module.exports = {contactForm }
