@@ -1,0 +1,10 @@
+.container{
+    width: 72rem;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    gap:2rem
+}
