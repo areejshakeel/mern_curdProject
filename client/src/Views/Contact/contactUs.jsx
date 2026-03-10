@@ -21,16 +21,16 @@ const ContactUs = () => {
     }
     return (
         <div className="container_">
-            <div className="d-flex justify-content-center">
-                <div className="row m-3 align-items-center">
-                    <div className="col-md-6">
-                        <img src="/images/homePage.png" alt="this is a image"
-                            style={{ border: "2px solid peru" }}
-                            width="550" height="350" />
-                    </div>
-                    <div className="col-md-6">
-                        <h1>hello ContactUs page</h1>
-                        <form onSubmit={handleSubmit}>
+            <div className="row p-2 align-items-center">
+                <div className="col-md-6 text-center">
+                    <img src="/images/homePage.png" alt="this is a image"
+                        style={{ border: "2px solid peru" }}
+                        width="550" height="350" />
+                </div>
+                <div className="col-md-6">
+                    <h1 className="contact-title">Contact Us</h1>
+                    <form onSubmit={handleSubmit} className="contact-form">
+                        <div className="form-group">
                             <label htmlFor="username" >Username</label>
                             <input name="username" type="text"
                                 id="username"
@@ -39,7 +39,8 @@ const ContactUs = () => {
                                 autoComplete="off"
                                 onChange={handleInputField}
                                 value={contactData.username} ></input>
-                            <br />
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="email" >Email</label>
                             <input name="email" type="email"
                                 id="email"
@@ -48,7 +49,8 @@ const ContactUs = () => {
                                 autoComplete="off"
                                 onChange={handleInputField}
                                 value={contactData.email} ></input>
-                            <br />
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="message">Message</label>
                             <textarea name="message" id="message"
                                 type="text"
@@ -59,11 +61,10 @@ const ContactUs = () => {
                                 cols={30}
                                 rows={5}
                                 value={contactData.message} ></textarea>
-                            <br />
+                        </div>
 
-                            <button type="submit">Submit</button>
-                        </form>
-                    </div>
+                        <button className="wgbtn" type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>

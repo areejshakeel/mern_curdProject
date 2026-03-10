@@ -1,26 +1,30 @@
 .container_ {
     padding: 10px 0px;
 }
+
 h1 {
     font-size: 24px;
     margin: 20px 0px;
     color: white !important;
     font-family: Poppins-SemiBold;
 }
+
 h2 {
     font-size: 22px;
     margin: 20px 0px;
     color: white !important;
     font-family: Poppins-SemiBold;
 }
+
 p {
     font-size: 18px;
     color: white;
     letter-spacing: 0px;
     font-family: Poppins-Regular;
 }
-.wgbtn ,
-.wganimate-btn{
+
+.wgbtn,
+.wganimate-btn {
     background-color: #000000;
     text-transform: capitalize;
     color: #fff;
@@ -38,14 +42,17 @@ p {
     cursor: pointer;
     overflow: unset;
 }
+
 .wganimate-btn {
     background-color: #fff;
     border: 2px solid #000000;
-    color:  #000000;
+    color: #000000;
 }
-.wgbtn:hover{
+
+.wgbtn:hover {
     background-color: #524e4e;
 }
+
 .wganimate-btn:hover {
     background-color: peru;
 }
@@ -57,14 +64,15 @@ p {
     text-align: center;
 }
 
-.section-analytics > div {
+.section-analytics>div {
     padding: 12px 5px;
     border-right: 1px solid #ccc;
     background: peru;
 }
 
-.section-analytics > div:last-child {
-    border-right: none; /* remove border from last item */
+.section-analytics>div:last-child {
+    border-right: none;
+    /* remove border from last item */
 }
 
 .section-analytics h2 {
@@ -76,16 +84,19 @@ p {
     margin-top: 5px;
     font-size: 16px;
 }
+
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
 }
+
 li a {
     text-decoration: none;
 }
-.error-btn{
+
+.error-btn {
     background-color: #000000;
     text-transform: capitalize;
     color: #fff;
@@ -102,10 +113,55 @@ li a {
     cursor: pointer;
     overflow: unset;
 }
+
 .error-btn a {
     text-decoration: none;
 }
-.imagebox{
-border: 1px solid peru;
-box-shadow: 1px 0px 3px 1px peru;
+
+.imagebox {
+    border: 1px solid peru;
+    box-shadow: 1px 0px 3px 1px peru;
+}
+
+.contact-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Form */
+.contact-form .form-group {
+    margin-bottom: 18px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: white;
+    font-family: Poppins-Regular;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+    width: 80%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid peru;
+    outline: none;
+    transition: 0.3s;
+    font-size: 14px;
+    background: #000000;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: peru;
+    box-shadow: 0 0 0 4px rgba(205, 133, 63, 0.15);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #fff;   /* change to any color */
+    opacity: 0.9;    /* ensures full visibility */
 }

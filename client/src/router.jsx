@@ -7,6 +7,7 @@ import About from "./Views/About/about";
 import { Navbar } from "./Component/Navbar";
 import ErrorPage from "./Views/ErrorPage";
 import FooterComponent from "./Component/Footer";
+import Logout from "./Views/login/logout";
 
 
 const Router = () => {
@@ -20,6 +21,7 @@ const Router = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/logout" element={<Logout />} />
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
             <FooterComponent/>
