@@ -1,11 +1,6 @@
 const User = require("../Models/user_modal")
 const bcrypt = require ("bcryptjs")
 
-
-
-
-
-
 const home = async (req, res) => {
     try {
         res.status(200).json({ msg: "Home page!" })
@@ -33,7 +28,6 @@ const register = async (req, res) => {
             userId: userCreated._id.toString()
         });
     } catch (error) {
-        console.log(error, "error")
         res.status(500).json({ msg: "Internal server error" })
     }
 }
@@ -42,7 +36,7 @@ const login = async (req, res) => {
     try {
         const { email, password } = req.body
         const userExist = await User.findOne({ email })
-        console.log(userExist,"userExist")
+     
         if (!userExist) {
             res.status(400).send({ msg: "Invalid Credentails!" })
         }
@@ -58,9 +52,17 @@ const login = async (req, res) => {
         }
 
     } catch (error) {
-        console.log(error, "error")
         res.status(500).send({ msg: "Internal Server Error" })
     }
 }
 
-module.exports = { home, register,login }
+const getUser = (req,res) =>{
+    try{
+        const fetchUserData = req.user
+        console.log(fetchUserData,"fetchUserData")
+    }catch(error){
+        res.status(500).send({ msg: "Internal Server Error" })
+    }
+}
+
+module.exports = { home, register, login, getUser}
