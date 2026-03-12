@@ -29,7 +29,7 @@ const Home = () => {
                 </div>
             </div>
             {/* 2 section */}
-            <div></div>
+            {/* <div id="section2">
             <div className="row p-2">
                 <div className="col insightReport-box">
                     <label>50+</label>
@@ -48,6 +48,34 @@ const Home = () => {
                     <span>Service</span>
                 </div>
             </div>
+            </div> */}
+               <div id="section2">
+            <div className="row mx-5 my-3 boxdiv">
+    <div className="col insightReport-box">
+        <i className="fa-solid fa-building report-icon"></i>
+        <label>50+</label>
+        <span>Registered Companies</span>
+    </div>
+
+    <div className="col insightReport-box">
+        <i className="fa-solid fa-users report-icon"></i>
+        <label>10,000</label>
+        <span>Happy Clients</span>
+    </div>
+
+    <div className="col insightReport-box">
+        <i className="fa-solid fa-code report-icon"></i>
+        <label>500+</label>
+        <span>Well known Developers</span>
+    </div>
+
+    <div className="col insightReport-box">
+        <i className="fa-solid fa-headset report-icon"></i>
+        <label>24/7</label>
+        <span>Service</span>
+    </div>
+    </div>
+</div>
             {/* <div className="section-analytics p-4 col-12"> */}
             {/* <div className="col-3">
                     <h2>50+</h2>
