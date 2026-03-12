@@ -17,6 +17,10 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem("auth-token");
     };
 
+      const fetchLoggedInUser = () => {
+      
+    };
+
     return (
         <AuthContext.Provider value={{ isloggedIn, storeTokenInLS, LogoutUser }}>
             {children}

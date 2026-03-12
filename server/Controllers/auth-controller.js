@@ -5,7 +5,7 @@ const home = async (req, res) => {
     try {
         res.status(200).json({ msg: "Home page!" })
     } catch (error) {
-        res.status(400).send({ msg: "Internal server error" })
+        res.status(400).json({ msg: "Internal server error" })
     }
 }
 
@@ -38,7 +38,7 @@ const login = async (req, res) => {
         const userExist = await User.findOne({ email })
      
         if (!userExist) {
-            res.status(400).send({ msg: "Invalid Credentails!" })
+            res.status(400).json({ msg: "Invalid Credentails!" })
         }
         const validUser = await bcrypt.compare(password, userExist.password)
         if (validUser) {
@@ -48,11 +48,11 @@ const login = async (req, res) => {
                 userId: userExist._id.toString()
             });
         } else {
-            res.status(401).send({ msg: "Invalid Credentails!" })
+            res.status(401).json({ msg: "Invalid Credentails!" })
         }
 
     } catch (error) {
-        res.status(500).send({ msg: "Internal Server Error" })
+       return res.status(500).json({ msg: "Internal Server Error" })
     }
 }
 
@@ -60,8 +60,9 @@ const getUser = (req,res) =>{
     try{
         const fetchUserData = req.user
         console.log(fetchUserData,"fetchUserData")
+       return res.status(200).json({ fetchUserData })
     }catch(error){
-        res.status(500).send({ msg: "Internal Server Error" })
+      return  res.status(500).json({ msg: "Internal Server Error" })
     }
 }
 

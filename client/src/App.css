@@ -165,3 +165,121 @@ li a {
     color: #fff;   /* change to any color */
     opacity: 0.9;    /* ensures full visibility */
 }
+
+
+/*  */
+/* Dashboard background */
+/* ============================
+   REPORT DASHBOARD STYLE
+============================ */
+
+#section2 {
+  padding: 18px;
+  background: #f4f6fb;
+  border-radius: 16px;
+}
+
+/* ===== CARD ===== */
+.insightReport-box {
+  position: relative;
+  border-radius: 16px;
+  padding: 22px 10px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+/* Hover animation */
+.insightReport-box:hover {
+  transform: translateY(-21px) scale(1.07);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+}
+
+/* ===== NUMBERS ===== */
+.insightReport-box label {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+/* ===== TEXT ===== */
+.insightReport-box span {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* ============================
+   COLORFUL GRADIENT CARDS
+============================ */
+
+/* Row 1 */
+.row:nth-child(1) .insightReport-box:nth-child(1) {
+ background: linear-gradient(135deg, #5d76e4, #20122e);
+}
+
+.row:nth-child(1) .insightReport-box:nth-child(2) {
+     background: linear-gradient(135deg, #58c3e2, #141f2e);
+}
+
+.row:nth-child(1) .insightReport-box:nth-child(4) {
+      background: linear-gradient(135deg, #ffbd9c, #d00d12);
+}
+
+.row:nth-child(1) .insightReport-box:nth-child(5) {
+  background: linear-gradient(135deg,#ff416c,#ff4b2b);
+}
+
+/* Row 2 */
+.row:nth-child(2) .insightReport-box:nth-child(1) {
+  /* background: linear-gradient(135deg,#36d1dc,#5b86e5); */
+  background: linear-gradient(135deg, #36d1dc, #000000);
+}
+
+.row:nth-child(2) .insightReport-box:nth-child(2) {
+  /* background: linear-gradient(135deg,#ff9966,#ff5e62); */
+   background: linear-gradient(135deg, #ffbd9c, #d00d12);
+}
+
+.row:nth-child(2) .insightReport-box:nth-child(3) {
+  /* background: linear-gradient(135deg,#56ab2f,#a8e063); */
+     background: linear-gradient(135deg, #83317c, #e50fa6);
+}
+
+/* spacing */
+.row.px-1 {
+  margin-bottom: 10px;
+  gap:5px
+}
+
+/* smooth entrance animation */
+.insightReport-box {
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.insightReport-box::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 153%;
+    height: 142%;
+    background: rgba(255, 255, 255, 0.08);
+    transform: rotate(25deg);
+}
+/*  */

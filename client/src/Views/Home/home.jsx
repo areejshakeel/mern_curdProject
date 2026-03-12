@@ -29,8 +29,27 @@ const Home = () => {
                 </div>
             </div>
             {/* 2 section */}
-            <div className="section-analytics p-4 col-12">
-                <div className="col-3">
+            <div></div>
+            <div className="row p-2">
+                <div className="col insightReport-box">
+                    <label>50+</label>
+                    <span>Registered Companies</span>
+                </div>
+                <div className="col  insightReport-box">
+                    <label>10,000</label>
+                    <span>Happy Clients</span>
+                </div>
+                <div className="col  insightReport-box">
+                    <label>500+</label>
+                    <span>Well known Developers</span>
+                </div>
+                <div className="col  insightReport-box">
+                    <label>24/7</label>
+                    <span>Service</span>
+                </div>
+            </div>
+            {/* <div className="section-analytics p-4 col-12"> */}
+            {/* <div className="col-3">
                     <h2>50+</h2>
                     <p>Registered Companies</p>
                 </div>
@@ -45,15 +64,15 @@ const Home = () => {
                 <div className="col-3">
                     <h2>24/7</h2>
                     <p>Service</p>
-                </div>
-            </div>
+                </div> */}
+            {/* </div> */}
             {/* 3 section */}
             <div className="d-flex justify-content-center align-items-center">
                 <div className="row m-3 align-items-center">
                     <div className="col-md-6 text-center">
                         <img src="/images/homePage.png" alt="this is a image"
-                        className="imagebox"
-                         width="500" height="300" />
+                            className="imagebox"
+                            width="500" height="300" />
                     </div>
                     <div className="col-md-6">
                         <h1>
