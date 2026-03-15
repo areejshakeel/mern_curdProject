@@ -1,7 +1,14 @@
+import React from "react"
+import { useAuth } from "../../store/auth"
+
 const About = () =>{
+    const {authUser} = useAuth()
     return (
        <div className="container_">
             <div className="row m-3 align-items-center">
+                 <h1>
+                        Welcome {authUser?`${authUser?.username} to ou website`:"to our website" }
+                    </h1>
                 <div className="col-md-6">
                     <h1>
                         Lorem Ipsum

@@ -1,12 +1,26 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+import { useAuth } from "../../store/auth"
 
 
 const ContactUs = () => {
+    const { authUser } = useAuth()
+    const [fetchUser, setFetchUser] = useState(true)
     const [contactData, setContactData] = useState({
         username: "",
         email: "",
         message: ""
     })
+    // useEffect(() => {
+    //     if (fetchUser && authUser) {
+    //         setContactData({
+    //             username: authUser.username,
+    //             email: authUser.email,
+    //             message: ""
+    //         })
+    //         setFetchUser(false)
+    //     }
+    // }, [])
+
     const handleInputField = (e) => {
         let name = e.target.name
         let value = e.target.value
@@ -15,9 +29,31 @@ const ContactUs = () => {
             [name]: value
         })
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(contactData)
+        try {
+            const response = await fetch("http://localhost:5000/api/form/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(contactData)
+            })
+            if (response.ok) {
+                const data= await response.json()
+                console.log(data)
+                alert("Message send successfully")
+                setContactData({
+                    username: "",
+                    email: "",
+                    message: ""
+                })
+
+            }
+        } catch (error) {
+
+        }
+
     }
     return (
         <div className="container_">

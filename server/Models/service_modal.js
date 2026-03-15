@@ -1,0 +1,19 @@
+const {Schema,model} = require("mongoose")
+
+const ServiceSchema = new Schema({
+    service:{
+        type:String,
+        required:true
+    },
+      description:{
+        type:String,
+        required:true
+    },
+      price:{
+        type:String,
+        required:true
+    }
+})
+
+const Service=new model("Service",ServiceSchema)
+module.exports=Service

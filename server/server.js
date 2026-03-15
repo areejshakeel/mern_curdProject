@@ -5,6 +5,7 @@ const PORT = 5000
 const cors = require('cors')
 const authRoute = require('./Router/auth-route')
 const contactRoute = require('./Router/contact-route')
+const serviceRoute = require("./Router/service-route")
 const connectDb = require('./utils/database')
 
 var corsOptions = {
@@ -18,6 +19,7 @@ app.use(express.json())
 
 app.use("/api/auth", authRoute)
 app.use("/api/form", contactRoute)
+app.use("/api/data", serviceRoute)
 
 connectDb().then(() => {
     app.listen(PORT, () => {

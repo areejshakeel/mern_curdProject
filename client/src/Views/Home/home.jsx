@@ -1,4 +1,14 @@
+import React from "react"
+// import { toast,Bounce } from "react-toastify"
+
 const Home = () => {
+//    const notify = () => {
+//     toast.error("Login Successful!", {
+//       position: "top-right",
+//       autoClose: 3000,
+//       transition: Bounce
+//     });
+//   };
     return (
         <div className="container_">
             {/* 1 section */}
@@ -18,7 +28,7 @@ const Home = () => {
                                 <button className="wganimate-btn">Connect Now</button>
                             </a>
                             <a href="/service">
-                                <button className="wgbtn">Learn More</button>
+                                <button className="wgbtn" >Learn More</button>
                             </a>
                         </div>
                     </div>
@@ -29,71 +39,34 @@ const Home = () => {
                 </div>
             </div>
             {/* 2 section */}
-            {/* <div id="section2">
-            <div className="row p-2">
-                <div className="col insightReport-box">
-                    <label>50+</label>
-                    <span>Registered Companies</span>
-                </div>
-                <div className="col  insightReport-box">
-                    <label>10,000</label>
-                    <span>Happy Clients</span>
-                </div>
-                <div className="col  insightReport-box">
-                    <label>500+</label>
-                    <span>Well known Developers</span>
-                </div>
-                <div className="col  insightReport-box">
-                    <label>24/7</label>
-                    <span>Service</span>
+            <div id="section2">
+                <div className="row mx-5 my-3 boxdiv">
+                    <div className="col insightReport-box">
+                        <i className="fa-solid fa-building report-icon"></i>
+                        <label>50+</label>
+                        <span>Registered Companies</span>
+                    </div>
+
+                    <div className="col insightReport-box">
+                        <i className="fa-solid fa-users report-icon"></i>
+                        <label>10,000</label>
+                        <span>Happy Clients</span>
+                    </div>
+
+                    <div className="col insightReport-box">
+                        <i className="fa-solid fa-code report-icon"></i>
+                        <label>500+</label>
+                        <span>Well known Developers</span>
+                    </div>
+
+                    <div className="col insightReport-box">
+                        <i className="fa-solid fa-headset report-icon"></i>
+                        <label>24/7</label>
+                        <span>Service</span>
+                    </div>
                 </div>
             </div>
-            </div> */}
-               <div id="section2">
-            <div className="row mx-5 my-3 boxdiv">
-    <div className="col insightReport-box">
-        <i className="fa-solid fa-building report-icon"></i>
-        <label>50+</label>
-        <span>Registered Companies</span>
-    </div>
 
-    <div className="col insightReport-box">
-        <i className="fa-solid fa-users report-icon"></i>
-        <label>10,000</label>
-        <span>Happy Clients</span>
-    </div>
-
-    <div className="col insightReport-box">
-        <i className="fa-solid fa-code report-icon"></i>
-        <label>500+</label>
-        <span>Well known Developers</span>
-    </div>
-
-    <div className="col insightReport-box">
-        <i className="fa-solid fa-headset report-icon"></i>
-        <label>24/7</label>
-        <span>Service</span>
-    </div>
-    </div>
-</div>
-            {/* <div className="section-analytics p-4 col-12"> */}
-            {/* <div className="col-3">
-                    <h2>50+</h2>
-                    <p>Registered Companies</p>
-                </div>
-                <div className="col-3">
-                    <h2>10,000</h2>
-                    <p>Happy Clients</p>
-                </div>
-                <div className="col-3">
-                    <h2>500+</h2>
-                    <p>Well known Developers</p>
-                </div>
-                <div className="col-3">
-                    <h2>24/7</h2>
-                    <p>Service</p>
-                </div> */}
-            {/* </div> */}
             {/* 3 section */}
             <div className="d-flex justify-content-center align-items-center">
                 <div className="row m-3 align-items-center">
