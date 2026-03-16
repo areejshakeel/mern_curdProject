@@ -7,7 +7,8 @@ const authRoute = require('./Router/auth-route')
 const contactRoute = require('./Router/contact-route')
 const serviceRoute = require("./Router/service-route")
 const connectDb = require('./utils/database')
-
+// MONGODB_URI=mongodb+srv://admin:admin123@mern.a40s55l.mongodb.net/?appName=mern
+// JWT_SECRET_KEY=mernstackproject
 var corsOptions = {
   origin: "http://localhost:5173",
   methods:"GET , POST , DELETE , PATCH , HEAD",
