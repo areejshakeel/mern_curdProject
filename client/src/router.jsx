@@ -8,7 +8,7 @@ import { Navbar } from "./Component/Navbar";
 import ErrorPage from "./Views/ErrorPage";
 import FooterComponent from "./Component/Footer";
 import Logout from "./Views/login/logout";
-
+import ServiceFile from "./Views/ServiceFile/service";
 
 const Router = () => {
     return (
@@ -19,6 +19,7 @@ const Router = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<ContactUs />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/service" element={<ServiceFile />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/logout" element={<Logout />} />

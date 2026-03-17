@@ -72,7 +72,6 @@ p {
 
 .section-analytics>div:last-child {
     border-right: none;
-    /* remove border from last item */
 }
 
 .section-analytics h2 {
@@ -160,85 +159,96 @@ li a {
     border-color: peru;
     box-shadow: 0 0 0 4px rgba(205, 133, 63, 0.15);
 }
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #fff;   /* change to any color */
-    opacity: 0.9;    /* ensures full visibility */
-}
-.boxdiv{
-    display: flex;
-    gap: 30px;
-}
-.insightReport-box{
-    position:relative;
-    background:#fff;
-    padding:20px;
-    border-left:6px solid peru; /* thick left border */
-    box-shadow:0 2px 15px rgba(255, 222, 76, 0.1);
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    border-radius:16px;
-    overflow:hidden
-}
-/* Hover animation */
-.insightReport-box:hover {
-  transform: translateY(-21px) scale(1.07);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+    color: #fff;
+    /* change to any color */
+    opacity: 0.9;
+    /* ensures full visibility */
 }
 
-.insightReport-box label{
-    font-size:24px;
-    font-weight:bold;
+.boxdiv {
+    gap: 30px;
+}
+
+.insightReport-box {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-left: 6px solid peru;
+    /* thick left border */
+    box-shadow: 0 2px 15px rgba(102, 102, 101, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 16px;
+    overflow: hidden
+}
+
+/* Hover animation */
+.insightReport-box:hover {
+    transform: translateY(-21px) scale(1.07);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+}
+
+.insightReport-box label {
+    font-size: 24px;
+    font-weight: bold;
     color: white;
 }
 
-.insightReport-box span{
+.insightReport-box span {
     color: white
 }
 
-.report-icon{
-    font-size:24px;
-    color:#0d6efd;
-    margin-bottom:5px;
+.report-icon {
+    font-size: 24px;
+    color: #0d6efd;
+    margin-bottom: 5px;
 }
+
 /* Row 1 */
 .row:nth-child(1) .insightReport-box:nth-child(1) {
- /* background: linear-gradient(135deg, #5d76e4, #20122e); */
- background: linear-gradient(135deg, #a0a18c, #080808);
+    background: none;
+    /* background: linear-gradient(135deg, #a0a18c, #080808); */
 }
 
 .row:nth-child(1) .insightReport-box:nth-child(2) {
-     background: linear-gradient(135deg, #58c3e2, #141f2e);
+     background: none;
+    /* background: linear-gradient(135deg, #58c3e2, #141f2e); */
 }
 
 .row:nth-child(1) .insightReport-box:nth-child(3) {
-      /* background: linear-gradient(135deg, #ffbd9c, #d00d12); */
-     background: linear-gradient(135deg, #bdb6b63d, #000000);
+     background: none;
+    /* background: linear-gradient(135deg, #bdb6b63d, #000000); */
 }
 
 .row:nth-child(1) .insightReport-box:nth-child(4) {
-  /* background: linear-gradient(135deg,#ff416c,#ff4b2b); */
-    background: linear-gradient(135deg, #979d64, #342704);
+     background: none;
+    /* background: linear-gradient(135deg, #979d64, #342704); */
 }
+
 /* smooth entrance animation */
 .insightReport-box {
-  animation: fadeUp 0.6s ease;
+    animation: fadeUp 0.6s ease;
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
 /* shine effect */
-.insightReport-box::after{
-   content: "";
+.insightReport-box::after {
+    content: "";
     position: absolute;
     top: -50%;
     left: -86%;
@@ -250,6 +260,74 @@ li a {
 }
 
 /* hover animation */
-.insightReport-box:hover::after{
-    left:-5%;
+.insightReport-box:hover::after {
+    left: -5%;
+}
+
+/* Navigation css */
+body {
+    background-color: #000;
+    margin: 0;
+    font-family: "Georgia", serif;
+}
+
+header {
+    background-color: #000;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container div:first-child a {
+    color: peru;
+    font-family: Poppins-SemiBold;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .container div:first-child a:hover {
+    color: #fff;
+    /* optional hover effect */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: peru;
+    font-family: Poppins-SemiBold;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    /* hover color change only, no underline */
+}
+
+/* Active tab underline */
+nav ul li a.active {
+    color: #fff;
+    /* active link color */
+    border-bottom: 2px solid peru;
+    /* golden underline */
+    padding-bottom: 2px;
+    /* adjust spacing */
 }

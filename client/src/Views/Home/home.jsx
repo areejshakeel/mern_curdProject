@@ -40,7 +40,7 @@ const Home = () => {
             </div>
             {/* 2 section */}
             <div id="section2">
-                <div className="row mx-5 my-3 boxdiv">
+                <div className="row mx-5 my-4 boxdiv">
                     <div className="col insightReport-box">
                         <i className="fa-solid fa-building report-icon"></i>
                         <label>50+</label>
