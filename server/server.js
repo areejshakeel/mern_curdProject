@@ -6,6 +6,7 @@ const cors = require('cors')
 const authRoute = require('./Router/auth-route')
 const contactRoute = require('./Router/contact-route')
 const serviceRoute = require("./Router/service-route")
+const adminRoute = require("./Router/admin-router")
 const connectDb = require('./utils/database')
 // MONGODB_URI=mongodb+srv://admin:admin123@mern.a40s55l.mongodb.net/?appName=mern
 // JWT_SECRET_KEY=mernstackproject
@@ -21,6 +22,7 @@ app.use(express.json())
 app.use("/api/auth", authRoute)
 app.use("/api/form", contactRoute)
 app.use("/api/data", serviceRoute)
+app.use("/api/admin", adminRoute)
 
 connectDb().then(() => {
     app.listen(PORT, () => {

@@ -10,16 +10,16 @@ const ContactUs = () => {
         email: "",
         message: ""
     })
-    // useEffect(() => {
-    //     if (fetchUser && authUser) {
-    //         setContactData({
-    //             username: authUser.username,
-    //             email: authUser.email,
-    //             message: ""
-    //         })
-    //         setFetchUser(false)
-    //     }
-    // }, [])
+    useEffect(() => {
+        if (fetchUser && authUser) {
+            setContactData({
+                username: authUser.userName,
+                email: authUser.email,
+                message: ""
+            })
+            setFetchUser(false)
+        }
+    }, [])
 
     const handleInputField = (e) => {
         let name = e.target.name

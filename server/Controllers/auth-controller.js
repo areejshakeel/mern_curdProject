@@ -58,9 +58,9 @@ const login = async (req, res) => {
 
 const getUser = (req,res) =>{
     try{
-        const fetchUserData = req.user
-        console.log(fetchUserData,"fetchUserData")
-       return res.status(200).json({ fetchUserData })
+        const userData = req.user
+        console.log(userData,"userData")
+       return res.status(200).json({userData})
     }catch(error){
       return  res.status(500).json({ msg: "Internal Server Error" })
     }

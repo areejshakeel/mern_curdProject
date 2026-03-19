@@ -36,7 +36,7 @@ const register = () => {
                     phone: "",
                     password: ""
                 })
-                navigate("/login")
+                navigate("/")
             }
         } catch (error) {
             console.log(error, "registerform")

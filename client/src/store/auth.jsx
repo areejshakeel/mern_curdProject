@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(localStorage.getItem("auth-token"));
-     const [authUser, setAuthUser] = useState("");
+    const [authUser, setAuthUser] = useState("");
 
     const isloggedIn = !!token;
 
@@ -18,6 +18,7 @@ export const AuthProvider = ({ children }) => {
         setToken("");
         localStorage.removeItem("auth-token");
     };
+
     // JWT Authentication, currently logged In user data
     const userAuthentication = async () => {
         try {
@@ -28,9 +29,10 @@ export const AuthProvider = ({ children }) => {
                 },
             })
             const data = await response.json()
+            console.log(data.userData, "data")
             setAuthUser(data.userData)
         } catch (error) {
-
+            console.log(error, "error")
         }
     };
     useEffect(() => {
