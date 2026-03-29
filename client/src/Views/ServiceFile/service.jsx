@@ -7,6 +7,7 @@ import {
     UploadIcon,
     WarningIcon
 } from "./svgFile";
+import { useAuth } from "../../store/auth";
 
 //  {
 //     "userName":"test-user6",
@@ -15,19 +16,21 @@ import {
 //     "phone":"7845120"
 // }
 const ServiceFile = () => {
+    const {servicesData} = useAuth()
     const [data, setData] = useState([])
-    useEffect(() => {
-        getServices()
-    }, [])
-    const getServices = async () => {
-        const response = await fetch(`http://localhost:5000/api/data/service`, {
-            method: "GET"
-        })
-        if (response.ok) {
-            const data_ = await response.json()
-            setData(data_.message)
-        }
-    }
+  
+    // useEffect(() => {
+    //     getServices()
+    // }, [])
+    // const getServices = async () => {
+    //     const response = await fetch(`http://localhost:5000/api/data/service`, {
+    //         method: "GET"
+    //     })
+    //     if (response.ok) {
+    //         const data_ = await response.json()
+    //         setData(data_.message)
+    //     }
+    // }
     return (
         <>
             <div className="row p-2">
@@ -91,7 +94,7 @@ const ServiceFile = () => {
                     </h4>
                 </div>
                 <div className="row">
-                    {data.map((item, index) => (
+                    {servicesData.map((item, index) => (
                         <div className="col-md-4 mb-3" key={index}>
                             <div className="product-card">
 

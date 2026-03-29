@@ -9,6 +9,12 @@ const Home = () => {
 //       transition: Bounce
 //     });
 //   };
+let num =[1,2,3]
+console.log(num,"num")
+console.log(num.length,"num.length")
+delete num[0]
+console.log(num,"num")
+console.log(num.length,"num.length")
     return (
         <div className="container_">
             {/* 1 section */}
