@@ -333,3 +333,126 @@ nav ul li a.active {
     padding-bottom: 2px;
     /* adjust spacing */
 }
+
+/* table css */
+/* TABLE CONTAINER */
+.table-wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* TABLE */
+/* CARD CONTAINER */
+.table-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.table-title {
+  margin-bottom: 20px;
+  color: black !important;
+  /* border-left: 5px solid #CD853F; */
+  padding-left: 10px;
+}
+
+/* TABLE */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+/* HEADER */
+.admin-table thead tr {
+  background: #111;
+}
+
+.admin-table th {
+  color: peru;
+  text-align: left;
+  padding: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* ROWS */
+.admin-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* SOFT HOVER */
+.admin-table tbody tr {
+  transition: all 0.25s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: #faf6f2;
+  transform: scale(1.003);
+}
+
+/* USERNAME STYLE */
+.username {
+  font-weight: 600;
+  color: #222;
+}
+
+/* ROLE BADGES */
+.role {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.role.admin {
+  background: peru;
+  color: black;
+}
+
+.role.user {
+  background: #ececec;
+  color: #333;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* UPDATE BUTTON */
+.edit-btn {
+  background: black;
+   border: 1px solid black;
+  color: peru;
+  /* border: none; */
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background: #222;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: transparent;
+  border: 1px solid peru;
+  color: peru;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: peru;
+  color: black;
+}

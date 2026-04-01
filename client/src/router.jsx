@@ -9,6 +9,9 @@ import ErrorPage from "./Views/ErrorPage";
 import FooterComponent from "./Component/Footer";
 import Logout from "./Views/login/logout";
 import ServiceFile from "./Views/ServiceFile/service";
+import AdminLayout from "./Component/Layouts/adminLayout";
+import AdminUser from "./Views/Admin/adminUser";
+import AdminContact from "./Views/Admin/adminContact";
 
 const Router = () => {
     return (
@@ -24,6 +27,10 @@ const Router = () => {
                 <Route path="/register" element={<Register />} />
                 <Route path="/logout" element={<Logout />} />
                 <Route path="*" element={<ErrorPage />} />
+                <Route path="/admin" element={<AdminLayout />}>
+                    <Route path="user" element={<AdminUser />} />
+                    <Route path="contact" element={<AdminContact />} />
+                </Route>
             </Routes>
             <FooterComponent/>
         </BrowserRouter>

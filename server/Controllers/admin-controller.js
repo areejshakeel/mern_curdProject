@@ -24,4 +24,13 @@ const getAllContacts = async (req, res) => {
         return res.status(500).json({ msg: "Internal Server Error" })
     }
 }
-module.exports = {getAllUsers,getAllContacts}
+const deleteUserbyId = async (req, res) => {
+    try {
+        const id=req.params.id
+        await Users.deleteOne({_id:id})
+        return res.status(200).json({message:"User Deleted Successfully"})
+    } catch (error) {
+        return res.status(500).json({ msg: "Internal Server Error" })
+    }
+}
+module.exports = {getAllUsers,getAllContacts,deleteUserbyId}
